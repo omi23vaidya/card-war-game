@@ -1,0 +1,35 @@
+Create following lists
+P1 Deck List
+P2 Deck List
+P1 Play List
+P2 Play List
+Winnings List
+
+Create an array of 52 cards
+Shuffle the array
+Insert cards at end into Deck List of both players //both stacks should be of size 26 at start of game
+
+war = 0
+While both Deck Lists are not empty
+	Remove first card from deck list and insert at start into the play list
+	if war = 0 
+		compare the first cards in play list
+		if P1 > P2
+			copy elements from P1 & P2 Play list to winning list
+			shuffle winning list
+			move from winning list to P1 deck list at the bottom
+		else if P2 > P1
+			copy elements from P1 & P2 Play list to winning list
+			shuffle winning list
+			move from winning list to P2 deck list at the bottom
+		else if P1 = P2
+			war++
+	else
+		war --
+
+if P1 deck list = empty and P2 deck list != empty 
+	P2 wins
+else if P1 deck list != empty and P2 deck list = empty 
+	P1 wins
+else
+	game tied
